@@ -439,6 +439,9 @@
         -ms-flex-pack: center;
             justify-content: center;
   }
+  .eninka_stats a {
+    text-align: center;
+  }
 }
 
 @media (max-width: 600px) {
@@ -719,10 +722,6 @@ img {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-}
-
-#info .grid_info .grid_info_item .eninka_stats a {
-  text-align: center;
 }
 
 #info .grid_info .grid_info_item img {
