@@ -98,6 +98,10 @@
   #adress_container {
     margin-bottom: 1rem !important;
   }
+  //  Achievements grid
+  .grid_achievement {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
 }
 
 @media (max-width: 650px) {
