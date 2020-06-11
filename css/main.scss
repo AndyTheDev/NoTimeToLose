@@ -234,6 +234,10 @@ img {
       .eninka_stats {
         display: flex;
         flex-direction: column;
+
+        a {
+          text-align: center;
+        }
       }
 
       img {
