@@ -1,0 +1,256 @@
+.container {
+  max-width: $device_width;
+  padding: 1rem;
+  overflow: hidden;
+  margin: auto;
+}
+
+.container_navigation {
+  max-width:auto;
+  padding: 1rem;
+  overflow: hidden;
+  margin: auto;
+}
+
+.container_wide {
+  max-width: $wider_width;
+  padding: 1rem;
+  overflow: hidden;
+  margin: auto;
+}
+
+// Headings
+.large_heading {
+  font-size: 2rem;
+  font-weight: 400;
+  border-left: 3px solid $primary_color;
+  padding-left: 0.5rem;
+  margin: 1rem 0;
+
+  &_showcase {
+    font-size: 4rem;
+    font-weight: 300;
+  }
+
+  &_contact {
+    font-weight: 3rem;
+    font-weight: 700;
+    border-left: 3px solid $primary_color;
+    padding-left: 0.5rem;
+    margin: 1rem 0;
+  }
+
+  &_light {
+    font-size: 2rem;
+    font-weight: 400;
+    border-left: 3px solid $white_color;
+    padding-left: 0.5rem;
+    margin: 1rem 0;
+  }
+}
+
+.item_heading {
+  font-size: 1.8rem;
+  color: $white_color;
+  font-weight: 700;
+}
+
+.layout {
+  &_navigation {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &_showcase {
+    height: 92vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+}
+// Text types
+
+.item_text {
+  color: $white_color;
+  padding: 0.5rem 0;
+  font-size: 1.2rem;
+  padding: 0.5rem 0.5rem 0.5rem 0
+}
+
+.puppy_text {
+  color: $dark_color;
+  padding: 0.5rem 0;
+  font-size: 1.5rem;
+
+  &_status {
+    font-size: 1.2rem;
+    color: $primary_color;
+    font-weight: bold ;
+  }
+}
+
+.achievement_heading {
+  font-size: 1.5rem;
+}
+
+.achievement_detail {
+  font-size: 1rem;
+}
+
+//Buttons
+%btn_shared {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-weight: 400;
+  margin: 0.5rem 0;
+}
+
+.btn {
+  &_light {
+    @extend %btn_shared;
+    color: $black_color;
+    background: $white_color;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $primary_color;
+      border: $primary_color;
+    }
+  }
+
+  &_dark {
+    @extend %btn_shared;
+    color: $white_color;
+    background: $black_color;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+
+  }
+
+  &_transparent {
+    display: inline-block;
+    padding: 0.5rem 0;
+    border: none;
+    cursor: pointer;
+    font-weight: 400;
+    border-radius: none;
+    transition: all 0.3s;
+
+    &:hover {
+      border-left: 3px $primary_color solid;
+      color: $primary_color;
+      padding: 0.5rem;
+    }
+  }
+}
+
+// Footer 
+#footer {
+  background: $dark_color;
+  width: auto;
+
+  p,a {
+    color: $white_color;
+  }
+
+  .footer_container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4rem 0 3rem;
+  }
+
+  #item_container_1 {
+
+    a {
+      font-weight: 700;
+      transition: all 0.3s ease-in-out;
+
+       &:hover {
+        color: $footer_creator_color;
+       }
+    }
+  }
+
+  #item_container_2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    i {
+      padding-right: 0.5rem;
+    }
+
+    a {
+      margin: 1rem;
+      color: $white_color;
+      padding: 0 1rem;
+      transition: all 0.3s ease-in-out;
+
+      &:hover {
+        color: $primary_color;
+      }   
+    }
+  }
+}
+
+//Lines
+.line {
+  width: 200px;
+  height: 3px;
+  display: inline-block;
+  background-color: $primary_color;
+  margin: 0.5rem 0;
+}
+
+// Gallery
+.grid_gallery {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(4, 1fr);
+
+  img {
+    transition: all 0.3s;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}
+//Puppies
+.grid_specific_puppie {
+  padding: 1rem;
+  border-radius: 10px;
+  display: grid;
+  grid-template-columns: repeat(3,1fr);
+  background-color: $primary_color;
+
+  #puppie_item_text {
+    grid-column-start: 1;
+    grid-column-end: 3;
+  }
+
+  .grid_puppie_item {
+    img {
+      padding: 1rem;
+    }
+  }
+}
+// Puppies - gallery
+.grid_puppies_gallery {
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(3, 1fr);
+
+  img {
+    transition: all 0.3s;
+    
+    &:hover {
+      transform: scale(1.05);
+    }
+  }
+}

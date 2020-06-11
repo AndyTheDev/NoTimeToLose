@@ -1,0 +1,151 @@
+@media (max-width: 1200px) {
+  // o_nás : info - eninka
+  .grid_info {
+    flex-direction: column;
+    align-items: center;
+
+    .grid_info_item {
+
+      .eninka_stats {
+        display: flex;
+        flex-direction: row !important;
+        justify-content: space-around;
+        margin-bottom: 1rem;
+      }
+
+      img {
+        padding-right: 1rem;
+      }
+    }  
+  }
+}
+
+@media (max-width: 950px) {
+  // footer
+  #footer {
+  
+    .footer_container {
+      flex-direction: column;
+      height: none;
+
+      #item_container_1 {
+        padding-top: 1rem;
+      }
+
+      #item_container_2 {
+        margin-bottom: 0;
+
+        a {
+          margin-bottom: 0;
+          padding-bottom: 0.5rem;
+        }
+      }
+    }
+  }
+  // Kontakt
+  .flex_template {
+    grid-template-columns: repeat(1, 1fr) !important;
+    
+    .item_contact_2 {
+      display: flex !important;
+      align-items: flex-start;
+      justify-content: center;
+
+      .item_contact_2_content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      }
+    }
+  }
+
+  // News
+  .grid_news {
+    display: flex !important;
+
+    .recent_news_text {
+      display: flex !important;
+    }
+
+    .recent_news_image {
+      display: none;
+    }
+  }
+
+  // Grid Puppies
+  .grid_puppies {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+
+  // Grid Specific Puppie
+  .grid_specific_puppie {
+    display: flex;
+    flex-direction: column;
+  }
+
+  // Galerie
+  .grid_gallery {
+    grid-template-columns: repeat(2,1fr) !important;
+  }
+
+  // Galerie puppies
+  .grid_puppies_gallery {
+    grid-template-columns: repeat(2,1fr);
+  }
+
+  // Adress container
+  #adress_container {
+    margin-bottom: 1rem !important;
+  }
+}
+
+@media (max-width: 650px) {
+  // Social
+  .flex_template {
+    .item_contact_2 {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+  }
+
+  // Form
+  .flex_template {
+    form {
+      display: flex !important;
+      flex-direction: column;
+      align-items: center !important;
+    }
+
+    .flex_item_contact_1 {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    } 
+  }
+}
+
+@media (max-width: 600px) {
+  // Footer
+  #item_container_2 {
+    flex-direction: column;
+  }
+
+  // Galerie
+  .grid_gallery {
+    grid-template-columns: repeat(1,1fr) !important;
+  }
+
+  // Galerie puppies
+  .grid_puppies_gallery {
+    grid-template-columns: repeat(1,1fr);
+  }
+
+  // Grid Puppies
+  .grid_puppies {
+    grid-template-columns: repeat(1,1fr) !important;
+  }
+}

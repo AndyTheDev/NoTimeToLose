@@ -1,0 +1,302 @@
+@import 'variables';
+@import 'fragments';
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&display=swap');
+@import 'mobile';
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Manrope', sans-serif;
+  font-weight: 400;
+}
+
+a {
+  text-decoration: none;
+  color: $black_color;
+}
+
+img {
+  width: 100%;
+}
+
+// Landing Page
+
+.landing {
+  background: $black_overlay_color;
+  height: 100vh;
+  
+  &:before {
+    content: '';
+    background: url(../images/eninka_landing_1.jpg) no-repeat center center/cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
+
+  &_secondary {
+    background: $black_overlay_color;
+    height: 8vh;
+
+    &:before {
+      content: '';
+      background: url(../images/eninka_landing_1.jpg) no-repeat center center/cover;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 8vh;
+      z-index: -1;
+    }
+  }
+
+  .layout_showcase {
+    margin-left: 1rem;
+
+    #item_showcase_1 {
+    color: $white_color;
+    }
+
+    #item_showcase_2 {
+      p {
+        color: $white_color;
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+//Landing Page - News
+.grid_news {
+  display:grid;
+  grid-template-columns: repeat(4,1fr);
+  background: $primary_color;
+  padding: 1rem;
+  border-radius: 10px;
+  margin-bottom: 3rem;
+
+  .recent_news_text {
+    grid-column-start: 1;
+    grid-column-end:4;
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 0.5rem;
+
+    .btn_light {
+      width: 120px;
+      font-size:1.2rem ;
+      justify-self: flex-end;
+    }
+
+    .item_text {
+      color: $white_color;
+      padding: 0.5rem 0;
+      font-size: 1.2rem;
+      padding: 0.5rem 0.5rem 0.5rem 0
+    }
+  }
+}
+
+// Kontakt
+.flex_template {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  grid-gap: 1rem;
+  padding: 1rem;
+  background: $primary_color;
+  border-radius: 10px;
+
+  form {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+
+    .form_3 {
+      grid-column: 1/3;
+    }
+
+    .form_4 {
+      grid-column: 1/3;
+    }
+
+    .form_item {
+      display: flex;
+      flex-direction: column;
+      padding:  0.5rem 1rem;
+
+      .input_form {
+        line-height: 1.6rem;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        border: solid 1px $primary_color;
+        padding: 0.2rem;
+
+        &:focus {
+          outline: none;
+        }
+      }
+
+      .label_form {
+        color: $white_color;
+        font-weight: 700;
+        font-size: 1.2rem;
+      }
+    }
+  }
+
+  .btn_light {
+    margin-left: 1rem;
+  }
+
+  .item_contact_2 {
+    .item_contact_2_content {
+      padding: 0.5rem 1rem;
+      margin-bottom: 0.5rem;
+
+      .item_contact_2_content_text {
+        font-size: 1.2rem;
+        font-weight: 700;
+        color: $white_color;
+      }
+
+      i {
+        padding: 0.5rem 0.5rem;
+      }
+      
+      a {
+        color: $white_color;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $dark_color;
+        }
+      }
+
+      .content_social {
+        display: flex;
+        flex-direction: column;
+      }
+    }
+  }
+}
+
+// Kontakt - adresa
+#adresa {
+  #adress_container {
+    background-color: $primary_color;
+    border-radius: 10px;
+    padding: 1rem;
+    text-align: center;
+    margin-bottom: 8.7rem;
+
+    a {
+      color: $white_color;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $dark_color;
+      }
+    }
+  }
+}
+// O nás
+#info {
+  .flex_information {
+    background: $primary_color;
+    padding: 1rem;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
+  }
+
+  .grid_info {
+    background: $primary_color;
+    padding: 1rem;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    // display:grid;
+    // grid-template-columns: repeat(3,1fr);
+    // grid-gap: 1rem;
+    // background: $primary_color;
+    // padding: 1rem;
+    // border-radius: 10px;
+    // margin-bottom: 3rem;
+
+    .grid_info_item {
+
+      .eninka_stats {
+        display: flex;
+        flex-direction: column;
+      }
+
+      img {
+        transition: all 0.3s; 
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+
+      a {
+        color: $white_color;
+        padding: 0.5rem;
+        transition: all 0.3s;
+
+        &:hover {
+          color: $dark_color;
+        }
+      }
+    }
+  }
+
+  #flex_stats {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-content: flex-start;
+  }
+}
+
+  .grid_achievement {
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-gap: 1rem;
+
+    .flex_achievement {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      color: $primary_color;
+      padding: 1rem;
+      border-radius: 10px;
+      border: 3px solid $primary_color;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $white_color;
+        background-color: $primary_color;
+      }
+    }
+  }
+// Štěňata
+#puppy_showcase {
+  .grid_puppies {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 1.5rem;
+  }
+}
+
+//Štěňata - galerie
+#galerie_puppies {
+  border-radius: 10px;
+  margin-bottom: 3rem;
+}
