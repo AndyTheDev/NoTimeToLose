@@ -13,3 +13,4 @@
     
     header('Location: https://friendly-nightingale-7065dd.netlify.app/form_succes.html');
   }
+?>
