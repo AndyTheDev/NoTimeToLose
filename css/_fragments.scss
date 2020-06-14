@@ -147,6 +147,20 @@
       padding: 0.5rem;
     }
   }
+
+  &_yellow {
+    @extend %btn_shared;
+    color: $primary_color;
+    background-color: $white_color;
+    border: 3px solid $primary_color;
+    font-size: 1.5rem;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      color: $white_color;
+      background-color: $primary_color;
+    }
+  }
 }
 
 // Footer 

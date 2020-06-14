@@ -149,6 +149,11 @@ img {
         font-size: 1.2rem;
       }
     }
+
+    .btn_light {
+      padding: 0.8rem;
+      width: 50%;
+    }
   }
 
   .btn_light {
@@ -188,24 +193,50 @@ img {
 }
 
 // Kontakt - adresa
-#adresa {
-  #adress_container {
-    background-color: $primary_color;
-    border-radius: 10px;
-    padding: 1rem;
-    text-align: center;
-    margin-bottom: 8.7rem;
 
-    a {
-      color: $white_color;
-      transition: all 0.3s;
+#adress_container {
+  background-color: $primary_color;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: center;
+  margin-bottom: 6.7rem;
 
-      &:hover {
+  a {
+    color: $white_color;
+    transition: all 0.3s;
+
+    &:hover {
         color: $dark_color;
-      }
     }
   }
 }
+
+// Kontakt - odeslaná zpráva
+#form_message {
+
+  .flex_message {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 3px solid $primary_color;
+    border-radius: 10px;
+    padding: 3rem 1rem;
+
+    h2 {
+      transition: all 0.3s;
+
+      &:hover {
+        color: $primary_color;
+      }
+    }
+
+    a {
+      margin: 1rem 1.5rem;
+    }
+  }
+}
+
 // O nás
 #info {
   .flex_information {
@@ -233,7 +264,7 @@ img {
 
       .eninka_stats {
         display: flex;
-        flex-direction: column;
+        flex-direction: column; 
       }
 
       img {

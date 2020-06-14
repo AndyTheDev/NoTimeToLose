@@ -140,10 +140,20 @@
 }
 
 @media (max-width: 600px) {
-  // Footer
-  #item_container_2 {
-    flex-direction: column;
+  // Navigation
+  .landing_secondary {
+    height: 12vh !important;
+
+    &:before {
+      content: '';
+      height: 12vh !important;
+    }
   }
+
+  // Footer {
+    #item_container_2 {
+      flex-direction: column !important;
+    }
 
   // Galerie
   .grid_gallery {
@@ -158,5 +168,21 @@
   // Grid Puppies
   .grid_puppies {
     grid-template-columns: repeat(1,1fr) !important;
+  }
+}
+
+@media (max-width: 360px) {
+  // Footer 
+  #footer {
+    #item_container_2 {
+      a {
+        padding: 0 0.2rem;
+      }
+    }
+  }
+
+  // O nás - Úspěchy
+  .grid_achievement {
+    grid-template-columns: repeat(1, 1fr) !important;
   }
 }
