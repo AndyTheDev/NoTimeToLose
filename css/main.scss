@@ -238,7 +238,21 @@ img {
 }
 
 // O nás
-#info {
+#index_scroll {
+
+  .content {
+    position: relative;
+    height: 100vh;
+
+    h2 {
+      position: relative;
+      display: inline-block;
+      transition: all 0.3s;
+      transform-origin: left;
+      transform: scaleX(1);
+    }
+  } 
+
   .flex_information {
     background: $primary_color;
     padding: 1rem;
@@ -317,12 +331,63 @@ img {
       }
     }
   }
+#accordions {
+  .tab {
+    margin-bottom: 1rem;
+
+    .tab_heading {
+      background: $primary_color;
+      border: 3px solid $primary_color;
+      padding: 0.5rem 1rem;
+      border-radius: 10px;
+      color: $dark_color;
+
+      h2 {
+        pointer-events: none;
+      }
+    }
+
+    .tab_content {
+      background: $white_color;
+      border-radius: 10px;
+      border: 3px solid $primary_color;
+
+      .flex_tab_content {
+        display: flex;
+        width: 100%;
+
+        img {
+          padding: 1rem;
+          transition: all 0.3s;
+
+          &:hover {
+            transform: scale(1.05);
+          }
+        }
+        
+        .item_text {
+          color: $dark_color;
+          padding: 1rem;
+          margin-right: 3rem;
+          font-size: 1.5rem;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
 // Štěňata
 #puppy_showcase {
   .grid_puppies {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-gap: 1.5rem;
+  }
+}
+
+#puppies_placeholder {
+  .flex_puppies_placeholder {
+    margin-bottom: 42.5rem;
   }
 }
 

@@ -1,7 +1,7 @@
 :root {
   --primary-color: rgba(13, 110 ,139, 0.55);
-  --secondary-color: rgba(229, 148, 0, 0.9);
-  --overlay-color: rgba(229, 148, 0, 0.8);
+  --secondary-color: rgba(66, 219, 122, 0.9);
+  --overlay-color: rgba(66, 219, 122, 0.8);
   --black-color: #333333;
   --white-color: #ffffff;
   --animation-duration: 0.3s;
