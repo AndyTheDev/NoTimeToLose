@@ -60,6 +60,10 @@
     }
   }
 
+  .no_scroll {
+    overflow: unset;
+  }
+
   // News
   .grid_news {
     display: flex !important;
@@ -137,23 +141,98 @@
       text-align: center;
     }
   }
+  // Index
+  #index_scroll {
+    .basic_info_station {
+      flex-direction: column-reverse;
+
+      i {
+        padding-bottom: 1rem;
+      }
+    }
+
+    .basic_info_dog {
+      flex-direction: column;
+
+      i {
+        padding-bottom: 1rem;
+      }
+    }
+
+    .grid_gallery_index {
+      grid-template-columns: repeat(1,1fr);
+    }
+
+    .basic_info_stats {
+      grid-template-columns: repeat(1,1fr) !important;
+
+      .basic_info_tab_primary {
+        &:nth-child(1) {
+          border-bottom-left-radius: 0px !important;
+          border-top-right-radius: 10px;
+          border-top-left-radius: 10px;
+        } 
+
+        &:last-child {
+          border-top-right-radius: 0px !important;
+          border-bottom-right-radius: 10px;
+          border-bottom-left-radius: 10px;
+        }
+      }
+    }
+
+    .basic_info_shows {
+      flex-direction: column-reverse;
+      .tab_shows:first-child {
+        padding-top: 1rem;
+      }
+
+      .index_icon {
+        padding: 0 0 1rem 0 !important;
+      }
+    }
+
+    .flex_news {
+      flex-direction: column-reverse;
+      
+      .news_icon {
+        align-self: center;
+        padding: 1rem;
+      }
+    }
+  }
+
+  // Footer 
+  .footer_container {
+    flex-direction: column !important;
+
+    #item_container_1 {
+      text-align: center;
+    }
+    
+    #item_container_2 {
+      flex-direction: column !important;
+    }
+  }
+  // #Štěňata - info 
+  #puppie_info {
+    .flex_puppie_info {
+      flex-direction: column-reverse !important;
+      text-align: left;
+    }
+  }
 }
 
 @media (max-width: 600px) {
   // Navigation
   .landing_secondary {
-    height: 12vh !important;
+    height: 8vh !important;
 
     &:before {
       content: '';
-      height: 12vh !important;
+      height: 8vh !important;
     }
   }
-
-  // Footer {
-    #item_container_2 {
-      flex-direction: column !important;
-    }
 
   // Galerie
   .grid_gallery {
@@ -184,5 +263,35 @@
   // O nás - Úspěchy
   .grid_achievement {
     grid-template-columns: repeat(1, 1fr) !important;
+  }
+  // Top Menu Fix
+  .landing_secondary {
+    height: 12vh !important;
+
+    &::before {
+      height: 12vh !important;
+    }
+  }
+  // Kontakt - Adress Container
+  #adress_container {
+    padding: 1rem 0.5rem !important;
+  }
+  // Kontakt - formulář
+  .flex_template {
+    padding: 1rem 0 !important;
+
+    .input_form {
+      padding: 0.2rem 0 !important;
+    }
+
+    .form_item {
+      padding: 1rem 0 !important;
+    }
+
+    .btn_light {
+      padding: 0.5rem !important;
+      width: 80% !important;
+      margin: 0 !important;
+    }
   }
 }

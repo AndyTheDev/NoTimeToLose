@@ -5,6 +5,13 @@
   margin: auto;
 }
 
+.container_index {
+  max-width: $device_width;
+  padding: 1rem;
+  overflow: hidden;
+  margin: auto;
+}
+
 .container_navigation {
   max-width:auto;
   padding: 1rem;
@@ -17,6 +24,10 @@
   padding: 1rem;
   overflow: hidden;
   margin: auto;
+}
+
+.no_scroll {
+  overflow: hidden;
 }
 
 // Headings
@@ -102,9 +113,15 @@
   padding: 0.5rem 0;
   font-size: 1.5rem;
 
-  &_status {
+  &_status_free {
     font-size: 1.2rem;
     color: $primary_color;
+    font-weight: bold ;
+  }
+
+  &_status_taken {
+    font-size: 1.2rem;
+    color: $red_color;
     font-weight: bold ;
   }
 }
@@ -153,18 +170,36 @@
   }
 
   &_transparent {
-    display: inline-block;
-    padding: 0.5rem 0;
-    border: none;
-    cursor: pointer;
-    font-weight: 400;
-    border-radius: none;
-    transition: all 0.3s;
+    &_free {
+      display: inline-block;
+      padding: 0.5rem 0;
+      border: none;
+      cursor: pointer;
+      font-weight: 400;
+      border-radius: none;
+      transition: all 0.3s;
 
-    &:hover {
-      border-left: 3px $primary_color solid;
-      color: $primary_color;
-      padding: 0.5rem;
+      &:hover {
+        border-left: 3px $primary_color solid;
+        color: $primary_color;
+        padding: 0.5rem;
+      }
+    }
+
+    &_taken {
+      display: inline-block;
+      padding: 0.5rem 0;
+      border: none;
+      cursor: pointer;
+      font-weight: 400;
+      border-radius: none;
+      transition: all 0.3s;
+
+      &:hover {
+        border-left: 3px $red_color solid;
+        color: $red_color;
+        padding: 0.5rem;
+      }
     }
   }
 
@@ -252,6 +287,20 @@
     display: none;
   }
 
+  &_index {
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: repeat(2,1fr);
+
+    img {
+      transition: all 0.3s;
+      
+      &:hover {
+        transform: scale(1.05);
+      }
+    }
+  }
+
   img {
     transition: all 0.3s;
     
@@ -260,25 +309,8 @@
     }
   }
 }
-//Puppies
-.grid_specific_puppie {
-  padding: 1rem;
-  border-radius: 10px;
-  display: grid;
-  grid-template-columns: repeat(3,1fr);
-  background-color: $primary_color;
+// Puppies - info
 
-  #puppie_item_text {
-    grid-column-start: 1;
-    grid-column-end: 3;
-  }
-
-  .grid_puppie_item {
-    img {
-      padding: 1rem;
-    }
-  }
-}
 // Puppies - gallery
 .grid_puppies_gallery {
   display: grid;
