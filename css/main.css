@@ -348,6 +348,18 @@
           transform: scale(1.05);
 }
 
+@media (min-width: 1200px) and (max-width: 1500px) {
+  #puppy_showcase {
+    margin-bottom: 6.3rem;
+  }
+}
+
+@media (min-width: 950px) and (max-width: 1200px) {
+  #puppy_showcase {
+    margin-bottom: 12.4rem;
+  }
+}
+
 @media (max-width: 1200px) {
   .grid_info {
     -webkit-box-orient: vertical;
@@ -682,7 +694,7 @@ img {
 
 .landing:before {
   content: '';
-  background: url(../images/index/landing.jpg) no-repeat center center/cover;
+  background: url(../images/placeholders/landing.jpg) no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -1057,6 +1069,7 @@ img {
       -ms-flex-pack: center;
           justify-content: center;
   padding: 2rem;
+  border: 3px solid #42db7a;
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
 }

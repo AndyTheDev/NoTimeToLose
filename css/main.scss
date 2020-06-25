@@ -31,7 +31,7 @@ img {
   
   &:before {
     content: '';
-    background: url(../images/index/landing.jpg) no-repeat center center/cover;
+    background: url(../images/placeholders/landing.jpg) no-repeat center center/cover;
     position: absolute;
     top: 0;
     left: 0;
@@ -353,7 +353,7 @@ img {
             align-items: center;
             justify-content: center;
             padding: 2rem;
-            // border: 5px solid $primary_color;
+            border: 3px solid $primary_color;
             transition: all 0.3s;
 
             &:hover {
