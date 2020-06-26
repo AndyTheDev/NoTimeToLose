@@ -2,7 +2,7 @@
   if (isset($_POST['submit']))  {
   
     //Email information
-    $admin_email = "a.goncarov@outlook.cz";
+    $admin_email = "vipet@notimetolose.eu";
     $name = $_POST['name'];
     $email = $_POST['email'];
     $subject = $_POST['subject'];
@@ -11,6 +11,6 @@
     //send email
     mail($admin_email, "No Time To Lose:" . $subject, $message, "From:" . $email);
     
-    header('Location: https://friendly-nightingale-7065dd.netlify.app/form_succes.html');
+    header('Location: http://www.notimetolose.eu/form_succes.html');
   }
 ?>

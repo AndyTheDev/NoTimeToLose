@@ -710,7 +710,7 @@ img {
 
 .landing_secondary:before {
   content: '';
-  background: url(../images/eninka_landing_1.jpg) no-repeat center center/cover;
+  background: url(../images/placeholders/landing.jpg) no-repeat center center/cover;
   position: absolute;
   top: 0;
   left: 0;
@@ -1005,6 +1005,17 @@ img {
   font-size: 1.4rem;
 }
 
+#index_scroll .content .basic_info_dog a {
+  font-weight: bold;
+  color: #ffffff;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#index_scroll .content .basic_info_dog a:hover {
+  color: #333333;
+}
+
 #index_scroll .content .basic_info_stats {
   display: -ms-grid;
   display: grid;
@@ -1158,6 +1169,11 @@ img {
   color: #42db7a;
 }
 
+#index_scroll .content .news_primary .news_icon {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+}
+
 #index_scroll .content .news_secondary {
   background-color: #42db7a;
   padding: 1rem;
@@ -1181,6 +1197,8 @@ img {
 
 #index_scroll .content .news_secondary .news_item i {
   color: #ffffff;
+  -ms-flex-item-align: end;
+      align-self: flex-end;
 }
 
 #puppy_showcase .grid_puppies {
