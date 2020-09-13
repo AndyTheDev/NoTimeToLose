@@ -1,14 +1,14 @@
-@media (min-width:1200px) and (max-width: 1500px) {
-  #puppy_showcase {
-    margin-bottom: 6.3rem;
-  }
-}
+// @media (min-width:1200px) and (max-width: 1500px) {
+//   #puppy_showcase {
+//     margin-bottom: 6.3rem;
+//   }
+// }
 
-@media (min-width:950px) and (max-width: 1200px) {
-  #puppy_showcase {
-    margin-bottom: 12.4rem;
-  }
-}
+// @media (min-width:950px) and (max-width: 1200px) {
+//   #puppy_showcase {
+//     margin-bottom: 12.4rem;
+//   }
+// }
 
 @media (max-width: 1200px) {
   // o_nás : info - eninka
@@ -105,10 +105,8 @@
     grid-template-columns: repeat(2,1fr) !important;
   }
 
-  // Galerie puppies
-  .grid_puppies_gallery {
-    grid-template-columns: repeat(2,1fr);
-  }
+  // Galerie puppie
+  
 
   // Adress container
   #adress_container {
@@ -118,9 +116,39 @@
   .grid_achievement {
     grid-template-columns: repeat(2,1fr) !important;
   }
+  // litter overview
+  #puppy_showcase {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 768px) {
+  // Puppies-litter grid
+  #puppies_litters {
+    .grid_vrh {
+      display: flex;
+      flex-direction: column-reverse;
+    }
+
+    #grid_vrh_inner_flex {
+      flex-direction: row !important;
+    }
+  }
+
+  // Galerie puppies
+  .grid_puppies_gallery {
+    grid-template-columns: repeat(1,1fr);
+  }
 }
 
 @media (max-width: 650px) {
+  // Puppies Litters
+  #puppies_litters {
+    #grid_vrh_inner_flex {
+      flex-direction: column !important;
+      // align-items: center;
+    }
+  }
   // Social
   .flex_template {
     .item_contact_2 {
@@ -208,7 +236,7 @@
       flex-direction: column-reverse;
       
       .news_icon {
-        align-self: center;
+        align-self: center !important;
         padding: 1rem;
       }
     }
@@ -249,11 +277,6 @@
   // Galerie
   .grid_gallery {
     grid-template-columns: repeat(1,1fr) !important;
-  }
-
-  // Galerie puppies
-  .grid_puppies_gallery {
-    grid-template-columns: repeat(1,1fr);
   }
 
   // Grid Puppies

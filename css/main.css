@@ -222,6 +222,19 @@
   background-color: #42db7a;
 }
 
+.return_button {
+  margin: 0 0 1.5rem 5rem;
+  font-size: 1.3rem;
+  color: #ffffff;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.return_button:hover {
+  margin-left: 4.5rem;
+  color: #42db7a;
+}
+
 #footer {
   background: #333333;
   width: auto;
@@ -348,16 +361,70 @@
           transform: scale(1.05);
 }
 
-@media (min-width: 1200px) and (max-width: 1500px) {
-  #puppy_showcase {
-    margin-bottom: 6.3rem;
-  }
+#puppies_litters .grid_vrh_info_text {
+  font-size: 1.5rem;
 }
 
-@media (min-width: 950px) and (max-width: 1200px) {
-  #puppy_showcase {
-    margin-bottom: 12.4rem;
-  }
+#puppies_litters {
+  height: 85.3vh;
+}
+
+#puppies_litters .grid_vrh {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[2];
+      grid-template-columns: repeat(2, 1fr);
+  border-bottom: solid 3px #42db7a;
+  padding: 0.5rem;
+}
+
+#puppies_litters .grid_vrh #grid_vrh_inner_flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#puppies_litters .grid_vrh #grid_vrh_content_centered {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+#puppies_litters .grid_vrh_content #img_hover {
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+#puppies_litters .grid_vrh_content #img_hover:hover {
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+}
+
+#puppies_litters .grid_vrh_info_text {
+  font-size: 1.5rem;
+  font-weight: normal;
+}
+
+#puppies_litters .grid_vrh_parent_link {
+  font-weight: bold;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+#puppies_litters .grid_vrh_parent_link:hover {
+  color: #42db7a;
+  padding-left: 0.2rem;
+}
+
+.pad_icon {
+  padding: 0 1rem;
 }
 
 @media (max-width: 1200px) {
@@ -468,10 +535,6 @@
     -ms-grid-columns: (1fr)[2] !important;
         grid-template-columns: repeat(2, 1fr) !important;
   }
-  .grid_puppies_gallery {
-    -ms-grid-columns: (1fr)[2];
-        grid-template-columns: repeat(2, 1fr);
-  }
   #adress_container {
     margin-bottom: 1rem !important;
   }
@@ -479,9 +542,40 @@
     -ms-grid-columns: (1fr)[2] !important;
         grid-template-columns: repeat(2, 1fr) !important;
   }
+  #puppy_showcase {
+    height: 75vh;
+  }
+}
+
+@media (max-width: 768px) {
+  #puppies_litters .grid_vrh {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+  #puppies_litters #grid_vrh_inner_flex {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .grid_puppies_gallery {
+    -ms-grid-columns: (1fr)[1];
+        grid-template-columns: repeat(1, 1fr);
+  }
 }
 
 @media (max-width: 650px) {
+  #puppies_litters #grid_vrh_inner_flex {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
   .flex_template .item_contact_2 {
     display: -webkit-box !important;
     display: -ms-flexbox !important;
@@ -582,9 +676,9 @@
             flex-direction: column-reverse;
   }
   #index_scroll .flex_news .news_icon {
-    -ms-flex-item-align: center;
-        -ms-grid-row-align: center;
-        align-self: center;
+    -ms-flex-item-align: center !important;
+        -ms-grid-row-align: center !important;
+        align-self: center !important;
     padding: 1rem;
   }
   .footer_container {
@@ -622,10 +716,6 @@
   .grid_gallery {
     -ms-grid-columns: (1fr)[1] !important;
         grid-template-columns: repeat(1, 1fr) !important;
-  }
-  .grid_puppies_gallery {
-    -ms-grid-columns: (1fr)[1];
-        grid-template-columns: repeat(1, 1fr);
   }
   .grid_puppies {
     -ms-grid-columns: (1fr)[1] !important;
@@ -1172,6 +1262,7 @@ img {
 #index_scroll .content .news_primary .news_icon {
   -ms-flex-item-align: end;
       align-self: flex-end;
+  margin: 1rem;
 }
 
 #index_scroll .content .news_secondary {
@@ -1193,12 +1284,23 @@ img {
 
 #index_scroll .content .news_secondary .news_item p {
   font-size: 1.3rem;
+  color: #ffffff;
 }
 
 #index_scroll .content .news_secondary .news_item i {
   color: #ffffff;
   -ms-flex-item-align: end;
       align-self: flex-end;
+  padding: 1rem;
+}
+
+#index_scroll .content .news_secondary .news_item span {
+  font-weight: bold;
+  color: #ffffff;
+}
+
+#puppy_showcase {
+  height: 85.2vh;
 }
 
 #puppy_showcase .grid_puppies {
@@ -1219,11 +1321,6 @@ img {
 
 #puppies_placeholder .flex_puppies_placeholder {
   margin-bottom: 42.5rem;
-}
-
-#galerie_puppies {
-  border-radius: 10px;
-  margin-bottom: 3rem;
 }
 
 #puppie_info .flex_puppie_info {

@@ -218,6 +218,18 @@
   }
 }
 
+.return_button {
+  margin: 0 0 1.5rem 5rem;
+  font-size: 1.3rem;
+  color: $white_color;
+  transition: all 0.3s ease-in-out;
+
+  &:hover {
+    margin-left: 4.5rem;
+    color: $primary_color;
+  }
+}
+
 // Footer 
 #footer {
   background: $dark_color;
@@ -323,5 +335,65 @@
     &:hover {
       transform: scale(1.05);
     }
+  }
+}
+
+// Puppies - vrh content
+#puppies_litters {
+  .grid_vrh_info_text {
+    font-size: 1.5rem;
+  }
+}
+
+// Štěňata - Litters oveview
+#puppies_litters {
+  height: 85.3vh;
+  .grid_vrh {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    border-bottom: solid 3px $primary_color;
+    padding: 0.5rem;
+
+    #grid_vrh_inner_flex {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+    }
+
+    #grid_vrh_content_centered {
+      align-self: center;
+    }
+
+    &_content {
+      #img_hover {
+        transition: all 0.3s ease-in-out;
+
+        &:hover {
+          transform: scale(1.05);
+        }
+      }
+    }
+
+    &_info_text {
+      font-size: 1.5rem;
+      font-weight: normal;
+    }
+
+    &_parent_link {
+      font-weight: bold;
+      transition: all 0.3s;
+
+      &:hover {
+        color: $primary_color;
+        padding-left: 0.2rem;
+      }
+    }
+  } 
+}
+
+// Padding layout
+.pad {
+  &_icon {
+    padding: 0 1rem;
   }
 }

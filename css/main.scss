@@ -449,6 +449,7 @@ img {
 
         .news_icon {
           align-self: flex-end;
+          margin: 1rem;
         }
       }
 
@@ -472,11 +473,18 @@ img {
   
           p {
             font-size: 1.3rem;
+            color: $white_color;
           }
   
           i {
             color: $white_color;
             align-self: flex-end;
+            padding: 1rem;
+          }
+
+          span {
+            font-weight: bold;
+            color: $white_color;
           }
         }
       }
@@ -484,8 +492,10 @@ img {
   }
 } 
 
-// Štěňata
+// Štěňata - individual pups
 #puppy_showcase {
+  // TEMP
+  height: 85.2vh;
   .grid_puppies {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -510,10 +520,7 @@ img {
 }
 
 //Štěňata - galerie
-#galerie_puppies {
-  border-radius: 10px;
-  margin-bottom: 3rem;
-}
+
 // Štěňata - info
 #puppie_info {
   .flex_puppie_info {
